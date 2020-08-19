@@ -74,7 +74,7 @@ Por fim, adicione uma rota que mapeie o caminho de _URL_ "/users" para o compone
 
 Altere o componente `Users` criado acima no projeto `fixation-exercises`, para poder fazer o exercício a seguir.
 
-{{< highlight react >}}
+```js
 // arquivo Users.js
 import React from 'react';
 
@@ -87,7 +87,7 @@ const Users = ({ greetingMessage = 'Hi There' }) => (
 
 export default Users;
 
-{{< /highlight >}}
+```
 
 #### Exercício 8
 
