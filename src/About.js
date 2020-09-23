@@ -1,10 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const About = () => (
-  <div>
-    <h2>About</h2>
-    <p> My awesome About component </p>
-  </div>
-);
+class About extends React.Component {
+  render () {
+    return (
+      <div>
+        <h2>About</h2>
+        <p> My awesome About component </p>
+        <Link to="/">Voltar a Home</Link>
+      </div>
+    )
+  }
+}
 
 export default About;
