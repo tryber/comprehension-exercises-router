@@ -13,7 +13,7 @@ class App extends Component {
         <Link to="/Users" > Users </Link>
         <Route exact path="/" component={Home} />
         <Route path="/About" component={About} />
-        <Route path="/Users" render={(props) => <Users {...props} greetingMessage="Good Morning"  />} />
+        <Route path="/Users/:id" render={(props) => <Users {...props} greetingMessage="Good Morning"  />} />
       </BrowserRouter>
     );
   }
