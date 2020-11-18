@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 const StrictAccess = ({ user }) => {
   const { username, password } = user;
