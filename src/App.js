@@ -14,7 +14,7 @@ class App extends Component {
             return <Users {...props} greetingMessage={"Good Morning"} />
           }} />
           <Route path="/strict-access" render={(props) => {
-            return <StrictAccess user={{ name:'joao', passWord:'12345679' }} />
+            return <StrictAccess user={{ name:'joão', passWord:'12345679' }} />
           }} />
           <Route path="/about" component={About} />
           <Route path="/" component={Home} />
