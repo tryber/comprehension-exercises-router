@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import Users from './Users';
-import { Switch, BrowserRouter, Route } from 'react-router-dom';
 import StrictAccess from './StrictAccess';
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
           <Route path="/users/:id" render={(props) => {
             return <Users {...props} greetingMessage={"Good Morning"} />
           }} />
-          <Route path="/strictAccess" render={(props) => {
+          <Route path="/strict-access" render={(props) => {
             return <StrictAccess user={{ name:'joao', passWord:'12345679' }} />
           }} />
           <Route path="/about" component={About} />

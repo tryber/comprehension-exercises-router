@@ -7,7 +7,7 @@ const Home = () => (
     <p> My awesome Home component. </p>
     <Link to="/about">About</Link>
     <Link to="/users/:10">Users</Link>
-    <Link to="/strictAccess">Strict Acsess</Link>
+    <Link to="/strict-access">Strict Acsess</Link>
   </div>
 );
 
