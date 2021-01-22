@@ -1,10 +1,16 @@
-import React, { Component } from 'react';
-import Home from './Home';
+import React, { Component } from "react";
+import { BrowserRouter } from "react-router-dom";
+
+import Home from "./Home";
+import NavListURLs from "./NavListURLs";
 
 class App extends Component {
   render() {
     return (
-      <Home />
+      <BrowserRouter>
+        <Home />
+        <NavListURLs />
+      </BrowserRouter>
     );
   }
 }
