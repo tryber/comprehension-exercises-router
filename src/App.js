@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <NavListURLs />
-        <Content />
+        <Content greetingMessage="Good Morning" />
       </BrowserRouter>
     );
   }
