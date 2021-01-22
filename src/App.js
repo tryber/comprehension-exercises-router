@@ -5,13 +5,15 @@ import NavListURLs from "./NavListURLs";
 import Content from "./Content";
 
 import "./App.css";
+import usersIds from "./data";
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <NavListURLs />
-        <Content greetingMessage="Good Morning" />
+        {console.log(usersIds)}
+        <Content greetingMessage="Good Morning" usersIds={usersIds} />
       </BrowserRouter>
     );
   }

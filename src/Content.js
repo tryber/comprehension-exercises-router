@@ -5,14 +5,18 @@ import About from "./About";
 import Users from "./Users";
 import { Route, Switch } from "react-router-dom";
 
-const Content = (greetingMessage) => (
+const Content = ({ greetingMessage, usersIds }) => (
   <main>
     <Switch>
       <Route path="/about" component={About} />
       <Route
         path="/users"
         render={(props) => (
-          <Users {...props} greetingMessage={greetingMessage.greetingMessage} />
+          <Users
+            {...props}
+            greetingMessage={greetingMessage}
+            usersIds={usersIds}
+          />
         )}
       />
       <Route exact path="/" component={Home} />
