@@ -8,9 +8,9 @@ import { Route, Switch } from "react-router-dom";
 const Content = () => (
   <main>
     <Switch>
-      <Route path="/home" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/users" component={Users} />
+      <Route exact path="/" component={Home} />
     </Switch>
   </main>
 );
