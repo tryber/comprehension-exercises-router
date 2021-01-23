@@ -6,8 +6,9 @@ import About from "./About";
 import Users from "./Users";
 import StrictAccess from "./StrictAccess";
 
-const Content = ({ greetingMessage, usersIds, logedIn }) => (
+const Content = ({ greetingMessage, usersIds, logedIn, name }) => (
   <main>
+    {console.log(name)}
     <Switch>
       <Route path="/about" component={About} />
       <Route
@@ -28,7 +29,10 @@ const Content = ({ greetingMessage, usersIds, logedIn }) => (
           <Route exact path="/" component={Home} />
         )}
       </Route>
-      <Route path="/strict-access" component={StrictAccess} />
+      <Route
+        path="/strict-access"
+        render={(props) => <StrictAccess {...props} user={name} />}
+      />
     </Switch>
   </main>
 );

@@ -3,7 +3,6 @@ import { BrowserRouter } from "react-router-dom";
 
 import NavListURLs from "./NavListURLs";
 import Content from "./Content";
-import Login from "./login";
 
 import "./App.css";
 import usersIds from "./data";
@@ -35,7 +34,8 @@ class App extends Component {
     console.log(this.state.password);
   }
 
-  handleLogin() {
+  handleLogin(event) {
+    event.preventDefault();
     this.state.name === "joao" && this.state.password === "1234"
       ? this.setState({ logedIn: true })
       : this.setState({ logedIn: false });
@@ -44,19 +44,23 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <NavListURLs />
+        <NavListURLs
+          handleName={this.handleName}
+          handlePassword={this.handlePassword}
+          handleLogin={this.handleLogin}
+        />
         {console.log(usersIds)}
         <Content
           greetingMessage="Good Morning"
           usersIds={usersIds}
           logedIn={this.state.logedIn}
-          user={this.state.name}
+          name={this.state.name}
         />
-        <Login
+        {/* <Login
           handleName={this.handleName}
           handlePassword={this.handlePassword}
           handleLogin={this.handleLogin}
-        />
+        /> */}
       </BrowserRouter>
     );
   }
