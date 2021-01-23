@@ -1,11 +1,12 @@
 import React from "react";
+import { Redirect, Route, Switch } from "react-router-dom";
 
 import Home from "./Home";
 import About from "./About";
 import Users from "./Users";
-import { Route, Switch } from "react-router-dom";
+import StrictAccess from "./StrictAccess";
 
-const Content = ({ greetingMessage, usersIds }) => (
+const Content = ({ greetingMessage, usersIds, logedIn }) => (
   <main>
     <Switch>
       <Route path="/about" component={About} />
@@ -19,7 +20,15 @@ const Content = ({ greetingMessage, usersIds }) => (
           />
         )}
       />
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={Home}>
+        {console.log(logedIn)}
+        {logedIn ? (
+          <Redirect to="/strict-access" />
+        ) : (
+          <Route exact path="/" component={Home} />
+        )}
+      </Route>
+      <Route path="/strict-access" component={StrictAccess} />
     </Switch>
   </main>
 );
