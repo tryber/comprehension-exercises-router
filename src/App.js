@@ -13,6 +13,15 @@ class App extends Component {
         <Link to="/about">About</Link>
         <Link to="/users">Users</Link>
         <Link to="/strict-access">Strict Access</Link>
+
+        <Switch>
+          <Route path="/users/:id" render={(props) => (
+            <Users {...props} greetingMessage="Good Morning, my friends!" />
+          )} />
+          <Route path="/strict-access" render={(props) => (<StrictAccess {...props} user={{ username: "joao", password: "1234"}} />)} />
+          <Route path="/about" component={About} />
+          <Route exact path="/" component={Home} />
+        </Switch>
       </BrowserRouter>
     );
   }
