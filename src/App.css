@@ -1,0 +1,16 @@
+.header {
+  background-color: rgb(7, 21, 48);
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(168, 179, 179);
+  padding: 20px;
+}
+
+.header div {
+  font-size: larger;
+  margin: 10px;
+  color: chartreuse;
+}

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
-const Users = ({ greetingMessage = 'Hi There' }) => (
+const Users = ({ greetingMessage = 'Hi There', match }) => (
   <div>
-    <h2> Users </h2>
+    <h2> Users {match.params.profile} </h2>
     <p> {greetingMessage}, this is my awesome Users component </p>
     {/* <Link to='/'>Voltar a Home</Link> */}
   </div>
