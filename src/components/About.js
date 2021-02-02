@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class About extends Component {
   render() {
@@ -6,6 +7,8 @@ class About extends Component {
       <div>
         <h2>About</h2>
         <p> My awesome About component </p>
+
+        <Link to='/'>Voltar a Home</Link>
       </div>
     );
   }
