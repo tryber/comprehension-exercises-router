@@ -8,7 +8,7 @@ class About extends Component {
         <h2>About</h2>
         <p> My awesome About component </p>
 
-        <Link to='/'>Voltar a Home</Link>
+        {/* <Link to='/'>Voltar a Home</Link> */}
       </div>
     );
   }
