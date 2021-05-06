@@ -22,12 +22,13 @@ class Content extends React.Component {
           <Route exact path="/"component={ Home } />
           <Route path="/about" component={ About } />
           <Route
-            path="/users"
+            exact path="/users"
             render={ (reactRouterProps) => (
               <Users { ...reactRouterProps } 
               greetingMessage={ greeting } />
             ) }
           />
+          <Route path="/users/:userId" component={ Users } />
         </Switch>
       </main>
     );
