@@ -5,7 +5,7 @@ class About extends Component {
     return (
       <div>
         <h2>About</h2>
-        <p> My awesome About component </p>
+        <p> My awesome About componenta </p>
       </div>
     );
   }
