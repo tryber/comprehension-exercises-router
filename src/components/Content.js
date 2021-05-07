@@ -3,6 +3,7 @@ import React from 'react';
 import Home from '../pages/Home';
 import About from '../pages/About';
 import Users from '../pages/Users';
+import StrictAccess from './StrictAccess';
 
 import { Route, Switch } from 'react-router-dom';
 
@@ -10,29 +11,37 @@ class Content extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      greeting: 'Good morning!',
+      welcomeMessage: 'Good morning',
+      username: 'joao',
+      password: '1234',
     };
-  }
+  };
 
   render() {
-    const { greeting } = this.state;
+    const { welcomeMessage, username, password } = this.state;
+
     return (
       <main className="Content">
         <Switch>
           <Route exact path="/"component={ Home } />
           <Route path="/about" component={ About } />
           <Route
-            exact path="/users"
-            render={ (reactRouterProps) => (
-              <Users { ...reactRouterProps } 
-              greetingMessage={ greeting } />
+            path="/users/:userId"
+            render={ (routerProps) => (
+              <Users { ...routerProps } 
+              greetingMessage={ welcomeMessage } />
             ) }
           />
-          <Route path="/users/:userId" component={ Users } />
+          <Route
+            path="/strict-access"
+            render={ () => (
+              <StrictAccess user={ { username, password } } />
+            )}
+          />
         </Switch>
       </main>
     );
-  }
+  };
 }
 
 export default Content;
