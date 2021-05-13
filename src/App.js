@@ -10,7 +10,7 @@ class App extends Component {
       <BrowserRouter>
         <Route exact path="/" component={ Home } />
         <Route exact path="/about" component={ About } />
-        <Users />
+        <Route exact path="/users/" component={ Users } />
         <Link to="/" > Home </Link>
         <Link to="/about" > About </Link>
         <Link to="/users" > Users </Link>
