@@ -14,3 +14,17 @@ class About extends Component {
 }
 
 export default About;
+# Atividade
+## Lista de Atividade
+- [x] Atividade 1
+- [x] Atividade 2
+- [x] Atividade 3
+- [x] Atividade 4
+- [x] Atividade 5
+- [x] Atividade 6
+- [ ] Atividade 7
+- [ ] Atividade 8
+- [ ] Atividade 9
+- [ ] Atividade 10
+- [ ] Atividade 11
+- [ ] Atividade 12
