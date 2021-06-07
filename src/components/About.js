@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 
 class About extends Component {
   render() {
+    const { greetingsMessage } = this.props
+    const { id } = this.props.match.params
     return (
       <div>
         <h2>About</h2>
-        <p> My awesome About component </p>
+        <p> {greetingsMessage} My awesome {this.props.name} component { id } </p>
         <Link to="/">Voltar a Home</Link>
       </div>
     );
@@ -14,17 +16,3 @@ class About extends Component {
 }
 
 export default About;
-# Atividade
-## Lista de Atividade
-- [x] Atividade 1
-- [x] Atividade 2
-- [x] Atividade 3
-- [x] Atividade 4
-- [x] Atividade 5
-- [x] Atividade 6
-- [ ] Atividade 7
-- [ ] Atividade 8
-- [ ] Atividade 9
-- [ ] Atividade 10
-- [ ] Atividade 11
-- [ ] Atividade 12
