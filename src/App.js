@@ -18,12 +18,12 @@ class App extends Component {
       <Switch>
       <Route path="/about" component={About} />
       <Route 
-        path="/users:id" 
+        path="/users/:id" 
         render={(props) => 
         <Users {...props} 
-        greetingsMessage="Good Morning" />} 
+        greetingsMessage= { 'Good Morning' } />} 
       />
-      <Route 
+      <Route
         path="/strict-access" 
         render={() => 
         <StrictAccess 

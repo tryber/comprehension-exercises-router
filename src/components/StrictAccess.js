@@ -12,7 +12,7 @@ class StrictAccess extends React.Component {
     return (
       <p>Welcome João!</p>
     );
-}
+  }
 }
 
 export default StrictAccess;
