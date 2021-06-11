@@ -8,7 +8,7 @@ import StrictAccess from './components/StrictAccess';
 class App extends Component {
   render() {
     const randomId = Math.round(Math.random()*2000);
-    
+
     const links = [
       {link: '/', component: 'Home'},
       {link: '/about', component: 'About'},
