@@ -16,7 +16,9 @@ class App extends Component {
       <BrowserRouter>
         <Route exact path="/" component={ Home } />
         <Route path="/about" component={ About } />
-        <Route path="/users" render={ () => <Users greetingsMessage="Good Morning" /> } />
+        <Route path="/users/:id" render={ (props) => (
+          <Users { ...props} greetingsMessage="Good Morning" />
+        ) } />
 
         { links.map(({ link, component }) => (
           <Link to={ link } key={ component }>{ component }</Link>
