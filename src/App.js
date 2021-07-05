@@ -15,7 +15,7 @@ class App extends Component {
               <li><Link to="/users">Users</Link></li>
             </ul>
         </nav>
-        <Route exact path="/users" component={ Users } />
+        <Route exact path="/users"  render={ () => <Users greetingsMessage="Good Morning" />}/>
         <Route exact path="/about" component={ About } />
         <Route exact path="/" component={ Home } />
       </BrowserRouter>      
