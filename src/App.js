@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import About from './components/About';
 import Home from './components/Home';
 import Users from './components/Users';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -15,9 +15,11 @@ class App extends Component {
               <li><Link to="/users">Users</Link></li>
             </ul>
         </nav>
-        <Route exact path="/users"  render={ () => <Users greetingsMessage="Good Morning" />}/>
+      <Switch>
+        <Route exact path="/users/:id" render={ (props) => <Users {...props} greetingsMessage="Good Morning" />}/>
         <Route exact path="/about" component={ About } />
         <Route exact path="/" component={ Home } />
+      </Switch>
       </BrowserRouter>      
     );
   }
