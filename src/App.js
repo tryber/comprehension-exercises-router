@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import Home from './components/Home';
-import BrowserRouter from 'react-router'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Home />
+        <Route path="/" component={ Home } />
       </BrowserRouter>
-      
     );
   }
 }
