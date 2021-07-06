@@ -3,7 +3,7 @@ import './App.css'
 import Home from './components/Home';
 import About from './components/About'
 import Users from './components/Users'
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
 
 class App extends Component {
   render() {
@@ -15,10 +15,12 @@ class App extends Component {
 
     return (
       <BrowserRouter>
-        <Route exact path="/" component={ Home } />
-        <Route path="/About" component={ About } />
-        <Route path="/Users" render={(props) => <Users {...props} 
+      <Switch>
+        <Route path="/Users/:id" render={(props) => <Users {...props} 
           greetingsMessage="Good Morning" />} />
+        <Route path="/About" component={ About } />
+        <Route exact path="/" component={ Home } />
+      </Switch>
         { links.map(({ link, component })=> (
           <Link
             className="links"
